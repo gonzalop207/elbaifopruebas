@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fuentes alojadas en la propia web (subconjunto latin). El hash del nombre permite
+   cachearlas como immutable; si cambias un archivo, cambia también su nombre. */
+@font-face {
+  font-family: 'Barlow Condensed'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('/assets/fonts/barlow-condensed-600.0a7db401.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Condensed'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('/assets/fonts/barlow-condensed-700.05ba48a1.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Barlow Condensed'; font-style: normal; font-weight: 800; font-display: swap;
+  src: url('/assets/fonts/barlow-condensed-800.db5ae356.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-var.a00fd0fb.woff2') format('woff2');
+}
+/* Solo los iconos que usa la página; para añadir uno hay que regenerar el subconjunto. */
+@font-face {
+  font-family: 'Material Symbols Outlined'; font-style: normal; font-weight: 400; font-display: block;
+  src: url('/assets/fonts/material-symbols-subset.c74b06b4.woff2') format('woff2');
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
 :root {
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --brand: #fee400;
@@ -87,8 +129,65 @@ details[open] > :not(summary) { animation: faq-in 200ms var(--ease-out); }
 }
 .js-reveal [data-reveal].is-visible { opacity: 1; transform: none; }
 
+/* Titular del hero revelado por líneas: cada palabra sube desde su máscara y todas las de
+   una misma línea a la vez (--line lo pone el script). Mientras el script no lo ha partido,
+   el titular espera oculto; a los 2,5 s se muestra igualmente por si el script falla. */
+@media (prefers-reduced-motion: no-preference) {
+  .js #hero-title:not(.is-split) { visibility: hidden; animation: hero-failsafe 0s 2.5s forwards; }
+}
+@keyframes hero-failsafe { to { visibility: visible; } }
+#hero-title .line-mask {
+  display: inline-block;
+  overflow: clip;
+  vertical-align: top;
+  /* hueco para la coma y el subrayado sin cambiar el interlineado */
+  padding: 0.06em 0 0.24em;
+  margin: -0.06em 0 -0.24em;
+}
+#hero-title .line-in {
+  display: inline-block;
+  transform: translateY(130%);
+  animation: line-up 900ms var(--ease-out) forwards;
+  animation-delay: calc(var(--line, 0) * 90ms + 80ms);
+}
+@keyframes line-up { to { transform: none; } }
+/* el subrayado de "NO PARA," pasa a cada palabra (no se hereda en inline-block) */
+#hero-title.is-split .underline { text-decoration: none; }
+#hero-title .underline .line-in {
+  text-decoration: underline;
+  text-decoration-color: rgb(254 228 0 / 0.4);
+  text-underline-offset: 8px;
+}
+
+/* Botones con texto que rueda al pasar el ratón: la copia de abajo sustituye a la de arriba */
+[data-roll] .roll {
+  display: inline-grid;
+  overflow: clip;
+  gap: inherit;
+  padding: 0.1em 0;
+  margin: -0.1em 0;
+}
+[data-roll] .roll > span {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: inherit;
+  transition: transform 450ms var(--ease-out);
+}
+[data-roll] .roll-b { transform: translateY(115%); }
+@media (hover: hover) and (pointer: fine) {
+  [data-roll]:hover .roll-a { transform: translateY(-115%); }
+  [data-roll]:hover .roll-b { transform: none; }
+}
+[data-roll]:focus-visible .roll-a { transform: translateY(-115%); }
+[data-roll]:focus-visible .roll-b { transform: none; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  [data-roll] .roll > span { transition: none; }
+  [data-roll] .roll-b { visibility: hidden; }
+  [data-roll]:is(:hover, :focus-visible) .roll-a { transform: none; }
   .animate-ping, .animate-pulse { animation: none; }
   [class*="group-hover:scale"], [class*="hover:-translate"] { transform: none !important; }
   :is(a, button)[class*="bg-"]:active { transform: none; }

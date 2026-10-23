@@ -6,7 +6,7 @@ $types = @{
   '.html' = 'text/html; charset=utf-8'; '.css' = 'text/css'; '.js' = 'application/javascript'
   '.json' = 'application/json'; '.svg' = 'image/svg+xml'; '.png' = 'image/png'
   '.jpg' = 'image/jpeg'; '.jpeg' = 'image/jpeg'; '.webp' = 'image/webp'; '.ico' = 'image/x-icon'
-  '.md' = 'text/markdown; charset=utf-8'
+  '.md' = 'text/markdown; charset=utf-8'; '.woff2' = 'font/woff2'; '.xml' = 'application/xml'; '.txt' = 'text/plain; charset=utf-8'
 }
 
 $listener = New-Object System.Net.HttpListener
