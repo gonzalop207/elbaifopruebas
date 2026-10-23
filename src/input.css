@@ -2,16 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --brand: #fee400;
+}
+
 @layer base {
   html, body { margin: 0; padding: 0; }
-  /* Las anclas no quedan tapadas por la cabecera fija (h-20). */
-  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
-  body { overscroll-behavior: none; }
+  html {
+    /* Las anclas no quedan tapadas por la cabecera fija (h-20). */
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    /* mobile-native: sin destello gris al tocar ni inflado de texto en horizontal */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
   main > :first-child { margin-top: 0 !important; }
   main > :last-child { margin-bottom: 0 !important; }
+
+  /* Titulares equilibrados: sin palabras huérfanas en la última línea */
+  h1, h2, h3, h4 { text-wrap: balance; }
+
+  /* Superficies del navegador con la marca (impeccable) */
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+  input, select, textarea { caret-color: var(--brand); }
+
+  /* Controles: respuesta inmediata al toque y sin seleccionar su texto al mantener pulsado */
+  a, button, summary, label { touch-action: manipulation; }
+  button, summary, [role="button"] {
+    -webkit-user-select: none;
+    user-select: none;
+  }
 }
 
 ::-webkit-scrollbar { display: none; }
+
+/* iOS amplía la página en campos de menos de 16px y no vuelve a alejarla */
+@media (pointer: coarse) {
+  input, select, textarea { font-size: 16px !important; }
+}
+
+/* Zonas seguras (notch e indicador de inicio) con viewport-fit=cover */
+body > header { padding-top: env(safe-area-inset-top, 0px); }
+#barra-cta { padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px)); }
 
 /* Caja fija para los iconos: evita saltos de layout mientras carga la fuente. */
 .material-symbols-outlined {
@@ -20,6 +53,55 @@
   overflow: hidden;
 }
 
+/* Pulsación: los botones responden al presionar, no al soltar (emil-design-eng) */
+:is(a, button)[class*="bg-"] {
+  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+  transition-duration: 160ms;
+  transition-timing-function: var(--ease-out);
+}
+:is(a, button)[class*="bg-"]:active { transform: scale(0.97); }
+
+/* Menú móvil: entra en 200 ms, sale más rápido (150 ms) */
+#menu-movil {
+  transition: opacity 150ms var(--ease-out), transform 150ms var(--ease-out), display 150ms allow-discrete;
+}
+#menu-movil:not(.hidden) { transition-duration: 200ms; }
+#menu-movil.hidden { opacity: 0; transform: translateY(-8px); }
+@starting-style {
+  #menu-movil:not(.hidden) { opacity: 0; transform: translateY(-8px); }
+}
+
+/* Preguntas frecuentes: la respuesta aparece en lugar de saltar */
+details[open] > :not(summary) { animation: faq-in 200ms var(--ease-out); }
+@keyframes faq-in {
+  from { opacity: 0; transform: translateY(-4px); }
+}
+
+/* Entrada de cada bloque al llegar a él. Solo se oculta si el script ha arrancado
+   (html.js-reveal), así el contenido nunca se queda invisible sin JavaScript. */
+.js-reveal [data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+.js-reveal [data-reveal].is-visible { opacity: 1; transform: none; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .animate-ping, .animate-pulse { animation: none; }
+  [class*="group-hover:scale"], [class*="hover:-translate"] { transform: none !important; }
+  :is(a, button)[class*="bg-"]:active { transform: none; }
+  #menu-movil, #menu-movil.hidden { transform: none; }
+  details[open] > :not(summary) { animation-name: faq-fade; }
+}
+@keyframes faq-fade { from { opacity: 0; } }
+
+/* Transparencia reducida: barras opacas, sin desenfoque (apple-design) */
+@media (prefers-reduced-transparency: reduce) {
+  body > header, #barra-cta {
+    background-color: #111418;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
 }

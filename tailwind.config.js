@@ -3,6 +3,8 @@ module.exports = {
     content: ['./public/**/*.html'],
 
     darkMode: "class",
+    // hover: solo en dispositivos con ratón; evita hovers pegados tras un toque (mobile-native)
+    future: { hoverOnlyWhenSupported: true },
     theme: {
       extend: {
         "colors": {
@@ -32,7 +34,7 @@ module.exports = {
           "surface-container-high": "#272a2f",
           "tertiary-fixed-dim": "#d2cc00",
           "outline-variant": "#4b4731",
-          "on-primary-container": "#716500",
+          "on-primary-container": "#0e1115",
           "primary": "#ffffff",
           "error": "#ffb4ab",
           "inverse-surface": "#e1e2e8",
@@ -53,6 +55,11 @@ module.exports = {
           "on-secondary-fixed-variant": "#424750",
           "primary-fixed": "#fee400",
           "on-secondary": "#2c3139"
+        },
+        // ease-out fuerte para toda la interfaz (emil-design-eng)
+        "transitionTimingFunction": {
+          "DEFAULT": "cubic-bezier(0.23, 1, 0.32, 1)",
+          "out": "cubic-bezier(0.23, 1, 0.32, 1)"
         },
         "borderRadius": {
           "DEFAULT": "0.125rem",
