@@ -16,3 +16,5 @@ Tras cambiar clases en `public/index.html`, regenera `public/assets/styles.css` 
 ```
 tailwindcss-windows-x64.exe -c tailwind.config.js -i src/input.css -o public/assets/styles.css --minify
 ```
+
+Después sube el número de `styles.css?v=N` en `public/index.html` para que nadie vea el CSS anterior en caché.
