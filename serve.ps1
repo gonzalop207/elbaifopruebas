@@ -1,7 +1,7 @@
 param([int]$Port = 8080)
 
 # Servidor estático mínimo para desarrollo local (sin dependencias).
-$root = $PSScriptRoot
+$root = Join-Path $PSScriptRoot 'public'
 $types = @{
   '.html' = 'text/html; charset=utf-8'; '.css' = 'text/css'; '.js' = 'application/javascript'
   '.json' = 'application/json'; '.svg' = 'image/svg+xml'; '.png' = 'image/png'

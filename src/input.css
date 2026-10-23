@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  /* Las anclas no quedan tapadas por la cabecera fija (h-20). */
+  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+
+::-webkit-scrollbar { display: none; }
+
+/* Caja fija para los iconos: evita saltos de layout mientras carga la fuente. */
+.material-symbols-outlined {
+  display: inline-block;
+  width: 1em;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

@@ -1,234 +1,35 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "on-error-container": "#ffdad6",
-          "outline": "#979177",
-          "secondary-fixed": "#dee2ee",
-          "inverse-primary": "#6a5f00",
-          "tertiary-fixed": "#efe800",
-          "surface-container-highest": "#323539",
-          "surface-container-low": "#191c20",
-          "on-tertiary": "#343200",
-          "inverse-on-surface": "#2e3135",
-          "tertiary-container": "#efe800",
-          "secondary-container": "#424750",
-          "error-container": "#93000a",
-          "surface": "#111418",
-          "on-secondary-container": "#b1b5c0",
-          "on-primary-fixed": "#201c00",
-          "secondary": "#c2c6d1",
-          "secondary-fixed-dim": "#c2c6d1",
-          "surface-dim": "#111418",
-          "on-primary-fixed-variant": "#504700",
-          "on-error": "#690005",
-          "surface-bright": "#36393e",
-          "tertiary": "#ffffff",
-          "on-secondary-fixed": "#171c24",
-          "surface-container-high": "#272a2f",
-          "tertiary-fixed-dim": "#d2cc00",
-          "outline-variant": "#4b4731",
-          "on-primary-container": "#716500",
-          "primary": "#ffffff",
-          "error": "#ffb4ab",
-          "inverse-surface": "#e1e2e8",
-          "background": "#111418",
-          "on-tertiary-fixed-variant": "#4b4900",
-          "surface-tint": "#dec800",
-          "on-surface-variant": "#cec7aa",
-          "on-background": "#e1e2e8",
-          "primary-fixed-dim": "#dec800",
-          "on-tertiary-fixed": "#1e1d00",
-          "primary-container": "#fee400",
-          "surface-variant": "#323539",
-          "on-tertiary-container": "#6a6700",
-          "surface-container-lowest": "#0b0e12",
-          "surface-container": "#1d2024",
-          "on-primary": "#373100",
-          "on-surface": "#e1e2e8",
-          "on-secondary-fixed-variant": "#424750",
-          "primary-fixed": "#fee400",
-          "on-secondary": "#2c3139"
-        },
-        "borderRadius": {
-          "DEFAULT": "0.125rem",
-          "lg": "0.25rem",
-          "xl": "0.5rem",
-          "full": "0.75rem"
-        },
-        "spacing": {
-          "space-xl": "2.5rem",
-          "margin-mobile": "1.25rem",
-          "space-sm": "0.5rem",
-          "space-xs": "0.25rem",
-          "margin": "2.5rem",
-          "space-md": "1rem",
-          "gutter": "1.5rem",
-          "space-lg": "1.5rem",
-          "gutter-mobile": "1rem"
-        },
-        "fontFamily": {
-          "headline-md": [
-            "Barlow Condensed"
-          ],
-          "title-lg": [
-            "Plus Jakarta Sans"
-          ],
-          "title-md": [
-            "Plus Jakarta Sans"
-          ],
-          "headline-sm": [
-            "Barlow Condensed"
-          ],
-          "label-lg": [
-            "Barlow Condensed"
-          ],
-          "display-xl": [
-            "Barlow Condensed"
-          ],
-          "body-lg": [
-            "Plus Jakarta Sans"
-          ],
-          "headline-lg-mobile": [
-            "Barlow Condensed"
-          ],
-          "headline-lg": [
-            "Barlow Condensed"
-          ],
-          "body-sm": [
-            "Plus Jakarta Sans"
-          ],
-          "display-xl-mobile": [
-            "Barlow Condensed"
-          ],
-          "label-md": [
-            "Plus Jakarta Sans"
-          ],
-          "body-md": [
-            "Plus Jakarta Sans"
-          ],
-          "label-sm": [
-            "Plus Jakarta Sans"
-          ]
-        },
-        "fontSize": {
-          "headline-md": [
-            "28px",
-            {
-              "lineHeight": "32px",
-              "letterSpacing": "0em",
-              "fontWeight": "700"
-            }
-          ],
-          "title-lg": [
-            "18px",
-            {
-              "lineHeight": "24px",
-              "fontWeight": "700"
-            }
-          ],
-          "title-md": [
-            "16px",
-            {
-              "lineHeight": "22px",
-              "fontWeight": "600"
-            }
-          ],
-          "headline-sm": [
-            "22px",
-            {
-              "lineHeight": "26px",
-              "letterSpacing": "0.01em",
-              "fontWeight": "600"
-            }
-          ],
-          "label-lg": [
-            "16px",
-            {
-              "lineHeight": "20px",
-              "letterSpacing": "0.08em",
-              "fontWeight": "700"
-            }
-          ],
-          "display-xl": [
-            "72px",
-            {
-              "lineHeight": "76px",
-              "letterSpacing": "-0.02em",
-              "fontWeight": "800"
-            }
-          ],
-          "body-lg": [
-            "16px",
-            {
-              "lineHeight": "26px",
-              "fontWeight": "400"
-            }
-          ],
-          "headline-lg-mobile": [
-            "32px",
-            {
-              "lineHeight": "36px",
-              "letterSpacing": "0em",
-              "fontWeight": "700"
-            }
-          ],
-          "headline-lg": [
-            "40px",
-            {
-              "lineHeight": "44px",
-              "letterSpacing": "-0.01em",
-              "fontWeight": "700"
-            }
-          ],
-          "body-sm": [
-            "12px",
-            {
-              "lineHeight": "18px",
-              "fontWeight": "400"
-            }
-          ],
-          "display-xl-mobile": [
-            "48px",
-            {
-              "lineHeight": "52px",
-              "letterSpacing": "-0.01em",
-              "fontWeight": "800"
-            }
-          ],
-          "label-md": [
-            "13px",
-            {
-              "lineHeight": "16px",
-              "letterSpacing": "0.02em",
-              "fontWeight": "600"
-            }
-          ],
-          "body-md": [
-            "14px",
-            {
-              "lineHeight": "22px",
-              "fontWeight": "400"
-            }
-          ],
-          "label-sm": [
-            "11px",
-            {
-              "lineHeight": "14px",
-              "letterSpacing": "0.06em",
-              "fontWeight": "700"
-            }
-          ]
-        }
-      },
-    },
-  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-8 xl:px-12 flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><span aria-hidden="true" class="w-9 h-9 inline-flex items-center justify-center shrink-0 rounded-lg bg-primary-container text-[#0E1115] font-label-lg text-[20px] font-extrabold italic tracking-tight leading-none shadow-[0_0_24px_-4px_rgba(255,229,0,0.35)]">NS</span><span class="font-headline-md text-headline-md tracking-wider uppercase text-primary whitespace-nowrap">NONSTOP GYM <span class="text-primary-container">24H</span></span></div><nav class="hidden lg:flex items-center gap-space-md xl:gap-space-lg" data-active-classes="text-primary-container font-semibold"><a aria-current="page" class="uppercase tracking-wider transition-colors text-primary-container font-semibold" data-path="landing-page" href="#">Inicio</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="centros" href="#">Centros</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="tarifas" href="#">Tarifas</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="servicios" href="#">Servicios</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="comunidad" href="#">Comunidad</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="contacto" href="#">Contacto</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-primary-container hover:bg-tertiary-fixed text-on-primary-container font-label-lg text-label-lg uppercase px-space-lg py-space-sm rounded shadow-[0_0_24px_-4px_rgba(255,229,0,0.25)] hover:shadow-[0_0_32px_0px_rgba(255,229,0,0.4)] transition-all" data-path="registro-socio" href="#">Únete ahora</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLu9-PFGxEcUx0ovyNgXGArAXq9aH8HkrHQcgEsSjlXLu2OifhW9GCMIToA2rz_Ug4jAPTYDtElFGWgcC5lyQeKL1lLIYWTe4DKuOMCkoaPv8StkTiX8nokNLd6KNbUSfnMaTu8qiw3keVH3zEu5SFqdWOFVX8vkCCo-ux7cg0hBNtCGRcz92-JWr6BP8RJEbS7pFBpbBMMu-cicHNHEfby0X0otsopij_ML30NT5sA_iT4tqnVJo"/></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface antialiased overflow-x-hidden">
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gimnasio 24h sin permanencia en Cataluña | NonStop Gym 24H</title>
+<meta name="description" content="Gimnasio 24h sin permanencia en 5 centros de Cataluña: Arenys de Mar, Abrera, Pallejà, Olesa y Lliçà. Hyrox, clases y entrenador. Desde 37,30€/mes."/>
+<link rel="canonical" href="https://elbaifopruebas.vercel.app/"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#111418"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="es_ES"/>
+<meta property="og:site_name" content="NonStop Gym 24H"/>
+<meta property="og:title" content="NonStop Gym 24H · Gimnasio 24h sin permanencia en Cataluña"/>
+<meta property="og:description" content="5 centros abiertos 24/7, 365 días. Una sola cuota desde 37,30€/mes y sin permanencia."/>
+<meta property="og:url" content="https://elbaifopruebas.vercel.app/"/>
+<meta property="og:image" content="https://elbaifopruebas.vercel.app/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="NonStop Gym 24H: gimnasio 24 horas sin permanencia"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="NonStop Gym 24H · Gimnasio 24h sin permanencia en Cataluña"/>
+<meta name="twitter:description" content="5 centros abiertos 24/7, 365 días. Una sola cuota desde 37,30€/mes y sin permanencia."/>
+<meta name="twitter:image" content="https://elbaifopruebas.vercel.app/og-image.png"/>
+<link rel="icon" href="/favicon.ico" sizes="32x32"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&amp;icon_names=alarm_on,android,arrow_forward,bolt,call,chat,check,check_circle,chevron_right,close,coffee,confirmation_number,directions,directions_run,domain,done,event_available,expand_more,face,fitness_center,groups,hub,local_drink,location_on,lock_open,mail,menu,monitoring,phone_iphone,photo_camera,play_arrow,play_circle,qr_code_2,schedule,sports_score,star,support_agent,verified,verified_user,water_drop&amp;display=block" rel="stylesheet"/>
+<link href="/assets/styles.css" rel="stylesheet"/>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-8 xl:px-12 flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md shrink-0"><span aria-hidden="true" class="w-9 h-9 inline-flex items-center justify-center shrink-0 rounded-lg bg-primary-container text-[#0E1115] font-label-lg text-[20px] font-extrabold italic tracking-tight leading-none shadow-[0_0_24px_-4px_rgba(255,229,0,0.35)]">NS</span><span class="font-headline-md text-headline-md tracking-wider uppercase text-primary whitespace-nowrap">NONSTOP GYM <span class="text-primary-container">24H</span></span></div><nav aria-label="Principal" class="hidden lg:flex items-center gap-space-md xl:gap-space-lg" data-active-classes="text-primary-container font-semibold"><a aria-current="page" class="uppercase tracking-wider transition-colors text-primary-container font-semibold" data-path="landing-page" href="#inicio">Inicio</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="centros" href="#centros">Centros</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="tarifas" href="#tarifas">Tarifas</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="servicios" href="#servicios">Servicios</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="comunidad" href="#comunidad">Comunidad</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="contacto" href="#contacto">Contacto</a></nav><div class="flex items-center gap-space-md"><button aria-controls="menu-movil" aria-expanded="false" aria-label="Abrir menú" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded border border-surface-container-highest text-primary hover:border-primary-container transition-colors" id="menu-toggle" type="button"><span aria-hidden="true" class="material-symbols-outlined text-[26px]">menu</span></button><a class="hidden sm:inline-flex items-center justify-center bg-primary-container hover:bg-tertiary-fixed text-on-primary-container font-label-lg text-label-lg uppercase px-space-lg py-space-sm rounded shadow-[0_0_24px_-4px_rgba(255,229,0,0.25)] hover:shadow-[0_0_32px_0px_rgba(255,229,0,0.4)] transition-all" data-path="registro-socio" href="#tarifas">Únete ahora</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLu9-PFGxEcUx0ovyNgXGArAXq9aH8HkrHQcgEsSjlXLu2OifhW9GCMIToA2rz_Ug4jAPTYDtElFGWgcC5lyQeKL1lLIYWTe4DKuOMCkoaPv8StkTiX8nokNLd6KNbUSfnMaTu8qiw3keVH3zEu5SFqdWOFVX8vkCCo-ux7cg0hBNtCGRcz92-JWr6BP8RJEbS7pFBpbBMMu-cicHNHEfby0X0otsopij_ML30NT5sA_iT4tqnVJo" width="32" height="32" decoding="async"/></div></div><nav aria-label="Menú móvil" class="lg:hidden hidden border-t border-surface-container-highest bg-surface px-6 pb-space-lg" id="menu-movil"><a class="block py-3 border-b border-surface-container-highest font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-colors" href="#inicio">Inicio</a><a class="block py-3 border-b border-surface-container-highest font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-colors" href="#centros">Centros</a><a class="block py-3 border-b border-surface-container-highest font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-colors" href="#tarifas">Tarifas</a><a class="block py-3 border-b border-surface-container-highest font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-colors" href="#servicios">Servicios</a><a class="block py-3 border-b border-surface-container-highest font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-colors" href="#comunidad">Comunidad</a><a class="block py-3 border-b border-surface-container-highest font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary-container transition-colors" href="#contacto">Contacto</a><a class="mt-space-md flex items-center justify-center bg-primary-container text-on-primary-container font-label-lg text-label-lg uppercase px-space-lg py-3 rounded" href="#tarifas">Únete ahora</a></nav></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface antialiased overflow-x-hidden">
 <!-- 1. HERO SECTION -->
-<section class="relative w-full bg-surface-container-lowest overflow-hidden pb-space-xl">
+<section id="inicio" class="relative w-full bg-surface-container-lowest overflow-hidden pb-space-xl">
 <!-- Atmospheric lighting background -->
 <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(254,228,0,0.12),transparent_70%)] pointer-events-none"></div>
 <div class="absolute -top-32 right-0 w-[550px] h-[550px] bg-primary-container/10 blur-[130px] rounded-full pointer-events-none"></div>
@@ -256,48 +57,48 @@
 <div class="flex flex-col items-start w-full sm:w-auto">
 <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-primary-container hover:bg-tertiary-fixed text-on-primary-container font-headline-md text-headline-sm uppercase px-8 py-4 rounded transition-all duration-200 transform hover:-translate-y-0.5 shadow-[0_0_28px_-4px_rgba(254,228,0,0.35)]" href="#tarifas">
                 Únete desde 37,30€/mes
-                <span class="material-symbols-outlined font-bold">arrow_forward</span>
+                <span aria-hidden="true" class="material-symbols-outlined font-bold">arrow_forward</span>
 </a>
 <span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 self-center sm:self-start flex items-center gap-1">
-<span class="material-symbols-outlined text-primary-container text-[14px]">check_circle</span> Alta 100% online en menos de 2 minutos
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[14px]">check_circle</span> Alta 100% online en menos de 2 minutos
               </span>
 </div>
 <!-- Secondary Action -->
 <div class="flex flex-col items-start w-full sm:w-auto">
 <a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-primary font-headline-md text-headline-sm uppercase px-7 py-4 rounded border border-outline-variant/50 hover:border-primary-container transition-all duration-200" href="#pases">
                 Prueba un día por 10€
-                <span class="material-symbols-outlined text-title-md">confirmation_number</span>
+                <span aria-hidden="true" class="material-symbols-outlined text-title-md">confirmation_number</span>
 </a>
 <span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 self-center sm:self-start flex items-center gap-1">
-<span class="material-symbols-outlined text-primary-container text-[14px]">bolt</span> Deduce los 10€ si te das de alta
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[14px]">bolt</span> Deduce los 10€ si te das de alta
               </span>
 </div>
 </div>
 <!-- 4 Trust Badges Grid -->
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm w-full pt-space-md border-t border-surface-container-highest/60">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary-container text-title-lg">schedule</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-title-lg">schedule</span>
 <div>
 <p class="font-label-lg text-label-sm uppercase text-primary leading-tight">Abierto 24/7</p>
 <p class="font-body-sm text-body-sm text-secondary">365 días al año</p>
 </div>
 </div>
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary-container text-title-lg">lock_open</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-title-lg">lock_open</span>
 <div>
 <p class="font-label-lg text-label-sm uppercase text-primary leading-tight">Sin permanencia</p>
 <p class="font-body-sm text-body-sm text-secondary">Cancela en 1 clic</p>
 </div>
 </div>
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary-container text-title-lg">domain</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-title-lg">domain</span>
 <div>
 <p class="font-label-lg text-label-sm uppercase text-primary leading-tight">5 Centros</p>
 <p class="font-body-sm text-body-sm text-secondary">Una sola cuota</p>
 </div>
 </div>
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary-container text-title-lg">verified</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-title-lg">verified</span>
 <div>
 <p class="font-label-lg text-label-sm uppercase text-primary leading-tight">HYROX Partner</p>
 <p class="font-body-sm text-body-sm text-secondary">Material certificado</p>
@@ -308,7 +109,7 @@
 <!-- Hero Visual Media & Telemetry -->
 <div class="lg:col-span-5 relative mt-6 lg:mt-0">
 <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-surface-container-highest bg-surface-container-low shadow-2xl">
-<img class="w-full h-full object-cover" data-alt="Cinematic dark-gym photography of an intense athlete training late at night with heavy dumbbells in a modern industrial setting. Intense yellow amber rim lighting outlining the athlete against deep black carbon and dark charcoal background, subtle gym chalk floating in air, Panatta and Hyrox high-tech equipment visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt54SUAlzNoS5k5KoKh3ERy7K9Mio6mbXDZeJyRlTl3n6oiTSjyK_Us7BGUODlMefjqxKVmREKTOX9qmr7Xd1yJKpk44b44sdJ3wtD7bpb_gw25hhwNz_diuZheWUnuico7NSIvoRbgOP5ZCbAyTKQ2HIH96p4qsMcsALyWuFY-6abIAlFqJvJ42arJuLE5isuGdeyUgT5IpXyQvyfx8ve6tXbsQUSCTloD75mpKnRsdvMIb3EHQ0"/>
+<img class="w-full h-full object-cover" data-alt="Cinematic dark-gym photography of an intense athlete training late at night with heavy dumbbells in a modern industrial setting. Intense yellow amber rim lighting outlining the athlete against deep black carbon and dark charcoal background, subtle gym chalk floating in air, Panatta and Hyrox high-tech equipment visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt54SUAlzNoS5k5KoKh3ERy7K9Mio6mbXDZeJyRlTl3n6oiTSjyK_Us7BGUODlMefjqxKVmREKTOX9qmr7Xd1yJKpk44b44sdJ3wtD7bpb_gw25hhwNz_diuZheWUnuico7NSIvoRbgOP5ZCbAyTKQ2HIH96p4qsMcsALyWuFY-6abIAlFqJvJ42arJuLE5isuGdeyUgT5IpXyQvyfx8ve6tXbsQUSCTloD75mpKnRsdvMIb3EHQ0" width="512" height="279" decoding="async" fetchpriority="high"/>
 <!-- Live Club Occupancy Pill Overlay -->
 <div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-md p-4 rounded-lg border border-surface-container-highest shadow-lg flex items-center justify-between">
 <div class="flex items-center gap-3">
@@ -335,11 +136,11 @@
 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 lg:gap-10">
 <div class="flex items-center gap-2">
 <div class="flex text-primary-container">
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
 <div>
 <span class="font-title-md text-title-md text-primary font-bold">4.8 / 5</span>
@@ -381,7 +182,7 @@
 <!-- Benefit 1 -->
 <div class="bg-surface-container-low p-space-lg rounded-xl border border-surface-container-highest/50 hover:border-primary-container/60 hover:bg-surface-container transition-all duration-300 group">
 <div class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center text-primary-container mb-space-md group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[32px]">alarm_on</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[32px]">alarm_on</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">Entrena cuando quieras</h3>
 <p class="font-body-md text-body-md text-secondary">
@@ -391,7 +192,7 @@
 <!-- Benefit 2 -->
 <div class="bg-surface-container-low p-space-lg rounded-xl border border-surface-container-highest/50 hover:border-primary-container/60 hover:bg-surface-container transition-all duration-300 group">
 <div class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center text-primary-container mb-space-md group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[32px]">hub</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[32px]">hub</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">Una cuota, 5 centros</h3>
 <p class="font-body-md text-body-md text-secondary">
@@ -401,7 +202,7 @@
 <!-- Benefit 3 -->
 <div class="bg-surface-container-low p-space-lg rounded-xl border border-surface-container-highest/50 hover:border-primary-container/60 hover:bg-surface-container transition-all duration-300 group">
 <div class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center text-primary-container mb-space-md group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[32px]">fitness_center</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[32px]">fitness_center</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">Equipamiento Top</h3>
 <p class="font-body-md text-body-md text-secondary">
@@ -411,7 +212,7 @@
 <!-- Benefit 4 -->
 <div class="bg-surface-container-low p-space-lg rounded-xl border border-surface-container-highest/50 hover:border-primary-container/60 hover:bg-surface-container transition-all duration-300 group">
 <div class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center text-primary-container mb-space-md group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[32px]">face</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[32px]">face</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-xs">Acceso 100% digital</h3>
 <p class="font-body-md text-body-md text-secondary">
@@ -449,27 +250,27 @@
             </p>
 <ul class="space-y-3 font-body-sm text-body-sm text-secondary mb-8">
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Acceso ilimitado 24/7 los 365 días</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Acceso libre a los 5 centros</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>App NonStop con aforo en tiempo real</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Agua osmotizada gratis ilimitada</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Vestuarios individuales y duchas premium</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Asesoría inicial con entrenador incluida</span>
 </li>
 </ul>
@@ -492,27 +293,27 @@
             </p>
 <ul class="space-y-3 font-body-sm text-body-sm text-secondary mb-8">
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Acceso ilimitado 24/7 los 365 días</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Acceso libre a los 5 centros</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>App NonStop con aforo en tiempo real</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Agua osmotizada gratis ilimitada</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Vestuarios individuales y duchas premium</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Asesoría inicial con entrenador incluida</span>
 </li>
 </ul>
@@ -535,27 +336,27 @@
             </p>
 <ul class="space-y-3 font-body-sm text-body-sm text-secondary mb-8">
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Acceso ilimitado 24/7 los 365 días</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Acceso libre a los 5 centros</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>App NonStop con aforo en tiempo real</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Agua osmotizada gratis ilimitada</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Vestuarios individuales y duchas premium</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Asesoría inicial con entrenador incluida</span>
 </li>
 </ul>
@@ -585,27 +386,27 @@
             </p>
 <ul class="space-y-3 font-body-sm text-body-sm text-secondary mb-8">
 <li class="flex items-start gap-2 font-semibold text-primary">
-<span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
 <span>Acceso ilimitado 24/7 los 365 días</span>
 </li>
 <li class="flex items-start gap-2 font-semibold text-primary">
-<span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
 <span>Acceso libre a los 5 centros</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>App NonStop con aforo en tiempo real</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Agua osmotizada gratis ilimitada</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Vestuarios individuales y duchas premium</span>
 </li>
 <li class="flex items-start gap-2 text-primary font-medium">
-<span class="material-symbols-outlined text-primary-container text-[18px]">check</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[18px]">check</span>
 <span>Asesoría inicial + Planificación Trimestral</span>
 </li>
 </ul>
@@ -641,7 +442,7 @@
 <!-- Banner Especial Descuentos & Colectivos -->
 <div class="mt-space-lg bg-surface-container p-6 rounded-xl border border-primary-container/20 flex flex-col md:flex-row items-center justify-between gap-6">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[36px] text-primary-container shrink-0">groups</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[36px] text-primary-container shrink-0">groups</span>
 <div>
 <p class="font-headline-sm text-headline-sm uppercase text-primary">Descuentos Colectivos y Familias</p>
 <p class="font-body-sm text-body-sm text-secondary">
@@ -650,13 +451,13 @@
 </div>
 </div>
 <a class="shrink-0 font-label-lg text-label-lg uppercase text-primary-container hover:underline flex items-center gap-1" href="#contacto">
-          Consultar condiciones <span class="material-symbols-outlined text-title-md">chevron_right</span>
+          Consultar condiciones <span aria-hidden="true" class="material-symbols-outlined text-title-md">chevron_right</span>
 </a>
 </div>
 <!-- Microtexto de garantía -->
 <div class="text-center mt-6">
 <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-primary-container text-[16px]">verified_user</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[16px]">verified_user</span>
           Cancela cuando quieras con 15 días de antelación directamente desde tu móvil. Sin preguntas, trámites raros ni llamadas comerciales.
         </p>
 </div>
@@ -708,14 +509,14 @@
 <!-- App Download Badges -->
 <div class="pt-4 flex flex-wrap items-center gap-4">
 <a class="inline-flex items-center gap-3 bg-surface-container hover:bg-surface-container-high px-5 py-2.5 rounded-lg border border-outline-variant/60 transition-all" href="#">
-<span class="material-symbols-outlined text-[28px] text-primary">phone_iphone</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[28px] text-primary">phone_iphone</span>
 <div class="text-left">
 <p class="text-[10px] font-label-sm uppercase text-on-surface-variant leading-none">Descargar en</p>
 <p class="font-headline-sm text-headline-sm text-primary leading-tight">App Store</p>
 </div>
 </a>
 <a class="inline-flex items-center gap-3 bg-surface-container hover:bg-surface-container-high px-5 py-2.5 rounded-lg border border-outline-variant/60 transition-all" href="#">
-<span class="material-symbols-outlined text-[28px] text-primary">android</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[28px] text-primary">android</span>
 <div class="text-left">
 <p class="text-[10px] font-label-sm uppercase text-on-surface-variant leading-none">Disponible en</p>
 <p class="font-headline-sm text-headline-sm text-primary leading-tight">Google Play</p>
@@ -735,7 +536,7 @@
 <div class="bg-surface-container rounded-2xl p-4 flex flex-col items-center text-center my-auto">
 <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container mb-2">PASE SOCIO ACTIVO</span>
 <div class="w-28 h-28 bg-surface-container-lowest rounded-xl p-2 flex items-center justify-center border border-primary-container/40 mb-3">
-<span class="material-symbols-outlined text-[64px] text-primary-container">qr_code_2</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[64px] text-primary-container">qr_code_2</span>
 </div>
 <p class="font-headline-sm text-headline-sm uppercase text-primary">Marc V. Prat</p>
 <p class="font-body-sm text-[12px] text-secondary">Acceso Total 5 Centros · 24/7</p>
@@ -753,7 +554,7 @@
 </div>
 </section>
 <!-- 6. SERVICIOS Y DISCIPLINAS -->
-<section class="w-full bg-surface-container-lowest py-space-xl border-t border-surface-container-highest/30">
+<section id="servicios" class="w-full bg-surface-container-lowest py-space-xl border-t border-surface-container-highest/30">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="flex flex-col items-center text-center mb-space-xl">
 <span class="font-label-lg text-label-lg uppercase tracking-widest text-primary-container mb-2">Entrenamiento Integral</span>
@@ -767,7 +568,7 @@
 <!-- Service 1: HYROX -->
 <div class="relative bg-surface-container-low rounded-xl overflow-hidden border border-surface-container-highest group">
 <div class="h-56 w-full relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intense athlete pushing a heavy weighted sled on an indoor turf track inside a high-end gym. Hyrox official competition equipment, dramatic contrast lighting, dark athletic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO7WtuJ57BYrlxHigATq_1r4RQxYxiZNj2KUBbvcJWMSrpt6MrGvBv1cMpXPLpsKH4uZh7rqS_PXEisIfVws1-qrd_CRxpPQz0yELsW4WnS8D7ZVuj9Wiq85yiiJPMWdAzrlO4QeawhQfcFeHIsE0_RI7rwtO5sStCWMOiY01_Ff3qI8Ap7OPi3wKjdnohkIaKkyzKxyeWSjzoHifBM1c3t1ys9NvxH_jgQuDBOGj_QGoHxw3FQdI"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intense athlete pushing a heavy weighted sled on an indoor turf track inside a high-end gym. Hyrox official competition equipment, dramatic contrast lighting, dark athletic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO7WtuJ57BYrlxHigATq_1r4RQxYxiZNj2KUBbvcJWMSrpt6MrGvBv1cMpXPLpsKH4uZh7rqS_PXEisIfVws1-qrd_CRxpPQz0yELsW4WnS8D7ZVuj9Wiq85yiiJPMWdAzrlO4QeawhQfcFeHIsE0_RI7rwtO5sStCWMOiY01_Ff3qI8Ap7OPi3wKjdnohkIaKkyzKxyeWSjzoHifBM1c3t1ys9NvxH_jgQuDBOGj_QGoHxw3FQdI" width="512" height="279" decoding="async" loading="lazy"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
 <div class="absolute top-4 right-4 bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold px-3 py-1 rounded">
               Partner Oficial
@@ -779,7 +580,7 @@
               Pistas específicas con trineos de competición, SkiErgs Concept2, wall balls y sandbags calibrados. Entrena la disciplina del momento con material de carrera en Pallejà, Abrera y Lliçà d'Amunt.
             </p>
 <div class="flex items-center gap-2 text-primary-container font-label-lg text-label-sm uppercase">
-<span class="material-symbols-outlined text-title-md">sports_score</span>
+<span aria-hidden="true" class="material-symbols-outlined text-title-md">sports_score</span>
 <span>Pistas homologadas de competición</span>
 </div>
 </div>
@@ -787,7 +588,7 @@
 <!-- Service 2: CLASES DIRIGIDAS -->
 <div class="relative bg-surface-container-low rounded-xl overflow-hidden border border-surface-container-highest group">
 <div class="h-56 w-full relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High energy indoor cycling studio with athletes on state of the art spin bikes under moody neon and dark yellow lighting with instructor in foreground." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDANx_gWe-0sS4TK0ZYx8GyAZxwE7y7yvmgeUCrn2l0VsJI9EU-aGzwikUY4283rKJc7uoViXqSx3UTpQ3Uv_bnAGVvFqTVtX6QZBmdZryFqrRSWm07Ncb8h5uVhjMktzbVQ3dNH06YXInZlThbz_CXbtcynRHQPBCQvhQDTXmv2O2NSnXo4Ti4N0sWTAJbJLVhJ99qc0JAJetrgZXb3IIWvpG1Q-hCRv0ZXNFm9vwzI5JbCgUy644"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High energy indoor cycling studio with athletes on state of the art spin bikes under moody neon and dark yellow lighting with instructor in foreground." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDANx_gWe-0sS4TK0ZYx8GyAZxwE7y7yvmgeUCrn2l0VsJI9EU-aGzwikUY4283rKJc7uoViXqSx3UTpQ3Uv_bnAGVvFqTVtX6QZBmdZryFqrRSWm07Ncb8h5uVhjMktzbVQ3dNH06YXInZlThbz_CXbtcynRHQPBCQvhQDTXmv2O2NSnXo4Ti4N0sWTAJbJLVhJ99qc0JAJetrgZXb3IIWvpG1Q-hCRv0ZXNFm9vwzI5JbCgUy644" width="512" height="279" decoding="async" loading="lazy"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
 <div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase font-bold px-3 py-1 rounded border border-outline-variant/40">
               Presencial &amp; Virtual 24h
@@ -799,7 +600,7 @@
               Cycling de alta inmersión acústica, Pilates reformer y suelo, HYROX WODs y entrenamiento funcional. Sesiones presenciales con coach y pantallas virtuales disponibles a cualquier hora de la noche.
             </p>
 <div class="flex items-center gap-2 text-primary-container font-label-lg text-label-sm uppercase">
-<span class="material-symbols-outlined text-title-md">event_available</span>
+<span aria-hidden="true" class="material-symbols-outlined text-title-md">event_available</span>
 <span>Reserva fácil desde la app</span>
 </div>
 </div>
@@ -807,7 +608,7 @@
 <!-- Service 3: ENTRENAMIENTO PERSONAL -->
 <div class="relative bg-surface-container-low rounded-xl overflow-hidden border border-surface-container-highest group">
 <div class="h-56 w-full relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Personal trainer coaching a dedicated female athlete performing barbell squats with precision posture analysis inside a dark athletic gym." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTud-Z0KjuoANbxMbzdszql2BpxqZXTf_eOGIcheppznxvSuN97pX-9frZhmuiXh2GdViti4o6vzTTnrW7N7CVSVyrXCn4jTc8iTd1L0adEAX6zueWFa0H4nX0Y1BPsmGY2_ErYLXXIkxssrVVgf0VSgio1otDupBpdkJFpFOlKvdh0ktFtEh-UK7n1WW5p-WCLn74TLpuFXb3YAqX-ptFCrqZJrnbGD-B3Ci8imH0PZFKRwKzmD4"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Personal trainer coaching a dedicated female athlete performing barbell squats with precision posture analysis inside a dark athletic gym." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTud-Z0KjuoANbxMbzdszql2BpxqZXTf_eOGIcheppznxvSuN97pX-9frZhmuiXh2GdViti4o6vzTTnrW7N7CVSVyrXCn4jTc8iTd1L0adEAX6zueWFa0H4nX0Y1BPsmGY2_ErYLXXIkxssrVVgf0VSgio1otDupBpdkJFpFOlKvdh0ktFtEh-UK7n1WW5p-WCLn74TLpuFXb3YAqX-ptFCrqZJrnbGD-B3Ci8imH0PZFKRwKzmD4" width="512" height="279" decoding="async" loading="lazy"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
 </div>
 <div class="p-6">
@@ -816,7 +617,7 @@
               Sesiones 1-a-1 o en pareja con entrenadores certificados. Valoración biomecánica completa, planificación nutricional y auditoría periódica de progresos en fuerza y composición corporal.
             </p>
 <div class="flex items-center gap-2 text-primary-container font-label-lg text-label-sm uppercase">
-<span class="material-symbols-outlined text-title-md">monitoring</span>
+<span aria-hidden="true" class="material-symbols-outlined text-title-md">monitoring</span>
 <span>Seguimiento biométrico en la app</span>
 </div>
 </div>
@@ -824,7 +625,7 @@
 <!-- Service 4: NS247 RUN CLUB -->
 <div class="relative bg-surface-container-low rounded-xl overflow-hidden border border-surface-container-highest group">
 <div class="h-56 w-full relative overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dynamic athletic running club group running together in the twilight evening through an urban Catalonia route, high energy camaraderie and motion blur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9CVj1pJYemIgnyMUbk-9_GI4oo0y09dkqvFxzRlf1Z_x3p6_ExdwvSWKHdgTbBvxsvCX1vqvsHbsjYbxX1KERbryKmkoOolDarI80YGxtURVEYMsKWOg4_eoxOz3faZc_2VS7edFpVoFPemHHER9Pe9r7Tjj2-S693n2AK0x3H613uNgYiw7KraoLm94a0ENlFXkl4YxUfL4beYw03O5SnPmVyQyB9kYqCLidqCrSeFq_H8OVKqA"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A dynamic athletic running club group running together in the twilight evening through an urban Catalonia route, high energy camaraderie and motion blur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9CVj1pJYemIgnyMUbk-9_GI4oo0y09dkqvFxzRlf1Z_x3p6_ExdwvSWKHdgTbBvxsvCX1vqvsHbsjYbxX1KERbryKmkoOolDarI80YGxtURVEYMsKWOg4_eoxOz3faZc_2VS7edFpVoFPemHHER9Pe9r7Tjj2-S693n2AK0x3H613uNgYiw7KraoLm94a0ENlFXkl4YxUfL4beYw03O5SnPmVyQyB9kYqCLidqCrSeFq_H8OVKqA" width="512" height="279" decoding="async" loading="lazy"/>
 <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
 <div class="absolute top-4 right-4 bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase font-bold px-3 py-1 rounded">
               Abierto a Todos
@@ -836,7 +637,7 @@
               Quedadas semanales de running en grupo estructuradas por ritmos y niveles. Abiertas a socios y amigos sin coste adicional. Salidas nocturnas y preparación para carreras populares y maratones.
             </p>
 <div class="flex items-center gap-2 text-primary-container font-label-lg text-label-sm uppercase">
-<span class="material-symbols-outlined text-title-md">directions_run</span>
+<span aria-hidden="true" class="material-symbols-outlined text-title-md">directions_run</span>
 <span>Todos los jueves a las 20:00</span>
 </div>
 </div>
@@ -848,7 +649,7 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-primary-container shrink-0">
-<span class="material-symbols-outlined text-[26px]">water_drop</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[26px]">water_drop</span>
 </div>
 <div>
 <h4 class="font-title-md text-title-md text-primary font-bold">Agua Osmotizada Gratis</h4>
@@ -857,7 +658,7 @@
 </div>
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-primary-container shrink-0">
-<span class="material-symbols-outlined text-[26px]">coffee</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[26px]">coffee</span>
 </div>
 <div>
 <h4 class="font-title-md text-title-md text-primary font-bold">Café de Finca Molido</h4>
@@ -866,7 +667,7 @@
 </div>
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded bg-surface-container flex items-center justify-center text-primary-container shrink-0">
-<span class="material-symbols-outlined text-[26px]">local_drink</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[26px]">local_drink</span>
 </div>
 <div>
 <h4 class="font-title-md text-title-md text-primary font-bold">Batidos Proteicos NS</h4>
@@ -878,7 +679,7 @@
 </div>
 </section>
 <!-- 7. OFERTA DE ENTRADA: ASESORÍA GRATIS (High Conversion Yellow Block) -->
-<section class="w-full bg-primary-container text-on-primary-container py-space-xl relative overflow-hidden">
+<section id="asesoria" class="w-full bg-primary-container text-on-primary-container py-space-xl relative overflow-hidden">
 <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-white/20 rounded-full blur-3xl pointer-events-none"></div>
 <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
@@ -895,13 +696,13 @@
           </p>
 <ul class="space-y-2 font-label-lg text-label-lg uppercase text-on-primary-container">
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined font-bold">done</span> Test de composición corporal y movilidad
+<span aria-hidden="true" class="material-symbols-outlined font-bold">done</span> Test de composición corporal y movilidad
             </li>
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined font-bold">done</span> Configuración de rutina inicial en la app
+<span aria-hidden="true" class="material-symbols-outlined font-bold">done</span> Configuración de rutina inicial en la app
             </li>
 <li class="flex items-center gap-2">
-<span class="material-symbols-outlined font-bold">done</span> Asignación de objetivos medibles a 90 días
+<span aria-hidden="true" class="material-symbols-outlined font-bold">done</span> Asignación de objetivos medibles a 90 días
             </li>
 </ul>
 </div>
@@ -915,17 +716,17 @@
           </p>
 <form class="space-y-space-md" onsubmit="event.preventDefault(); alert('¡Solicitud enviada con éxito! Te contactaremos por WhatsApp o llamada en menos de 24h.');">
 <div>
-<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1">Nombre Completo</label>
-<input class="w-full bg-surface-container px-4 py-3 rounded text-primary font-body-md border border-surface-container-highest focus:border-primary-container focus:outline-none" placeholder="Ej. Carlos Martínez" required="" type="text"/>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1" for="asesoria-nombre">Nombre Completo</label>
+<input id="asesoria-nombre" name="nombre" autocomplete="name" class="w-full bg-surface-container px-4 py-3 rounded text-primary font-body-md border border-surface-container-highest focus:border-primary-container focus:outline-none" placeholder="Ej. Carlos Martínez" required="" type="text"/>
 </div>
 <div>
-<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1">Teléfono Móvil (WhatsApp)</label>
-<input class="w-full bg-surface-container px-4 py-3 rounded text-primary font-body-md border border-surface-container-highest focus:border-primary-container focus:outline-none" placeholder="+34 600 000 000" required="" type="tel"/>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1" for="asesoria-telefono">Teléfono Móvil (WhatsApp)</label>
+<input id="asesoria-telefono" name="telefono" autocomplete="tel" class="w-full bg-surface-container px-4 py-3 rounded text-primary font-body-md border border-surface-container-highest focus:border-primary-container focus:outline-none" placeholder="+34 600 000 000" required="" type="tel"/>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
 <div>
-<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1">Centro Preferido</label>
-<select class="w-full bg-surface-container px-3 py-3 rounded text-primary font-body-md border border-surface-container-highest focus:border-primary-container focus:outline-none">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1" for="asesoria-centro">Centro Preferido</label>
+<select id="asesoria-centro" name="centro" class="w-full bg-surface-container px-3 py-3 rounded text-primary font-body-md border border-surface-container-highest focus:border-primary-container focus:outline-none">
 <option value="abrera">Abrera</option>
 <option value="olesa">Olesa de Montserrat</option>
 <option value="palleja">Pallejà</option>
@@ -934,8 +735,8 @@
 </select>
 </div>
 <div>
-<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1">Objetivo Principal</label>
-<select class="w-full bg-surface-container px-3 py-3 rounded text-primary font-body-md border border-surface-container-highest focus:border-primary-container focus:outline-none">
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1" for="asesoria-objetivo">Objetivo Principal</label>
+<select id="asesoria-objetivo" name="objetivo" class="w-full bg-surface-container px-3 py-3 rounded text-primary font-body-md border border-surface-container-highest focus:border-primary-container focus:outline-none">
 <option value="grasa">Perder peso / Grasa</option>
 <option value="musculo">Ganar masa muscular</option>
 <option value="condicion">Mejorar condición física</option>
@@ -955,7 +756,7 @@
 </div>
 </section>
 <!-- 8. TESTIMONIOS REALES Y VALORACIONES -->
-<section class="w-full bg-surface py-space-xl border-t border-surface-container-highest/30">
+<section id="opiniones" class="w-full bg-surface py-space-xl border-t border-surface-container-highest/30">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="flex flex-col items-center text-center mb-space-xl">
 <span class="font-label-lg text-label-lg uppercase tracking-widest text-primary-container mb-2">Comunidad Real</span>
@@ -969,11 +770,11 @@
 <div class="bg-surface-container-low p-6 rounded-xl border border-surface-container-highest flex flex-col justify-between">
 <div>
 <div class="flex items-center text-primary-container mb-3">
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
 <p class="font-body-md text-body-md text-primary italic mb-6">
               "Poder entrenar a las 23:30 sin tener que pedir turno para una banca es impagable. La maquinaria Panatta es de otro nivel y el ambiente es de gente que va a entrenar en serio."
@@ -991,11 +792,11 @@
 <div class="bg-surface-container-low p-6 rounded-xl border border-surface-container-highest flex flex-col justify-between">
 <div>
 <div class="flex items-center text-primary-container mb-3">
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
 <p class="font-body-md text-body-md text-primary italic mb-6">
               "Me estoy preparando para mi primer HYROX y tener la zona oficial con trineo y SkiErg abierta a cualquier hora marca la diferencia total. No hay otro gym igual en la comarca."
@@ -1013,11 +814,11 @@
 <div class="bg-surface-container-low p-6 rounded-xl border border-surface-container-highest flex flex-col justify-between">
 <div>
 <div class="flex items-center text-primary-container mb-3">
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
 <p class="font-body-md text-body-md text-primary italic mb-6">
               "El centro nuevo de Arenys ha quedado increíble. Entras con el reconocimiento facial en 2 segundos, limpio, moderno, espacioso y con duchas individuales de 10."
@@ -1035,11 +836,11 @@
 <div class="bg-surface-container-low p-6 rounded-xl border border-surface-container-highest flex flex-col justify-between">
 <div>
 <div class="flex items-center text-primary-container mb-3">
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
 <p class="font-body-md text-body-md text-primary italic mb-6">
               "Viajo mucho por trabajo entre comarcas y que la misma cuota me sirva para entrar en los 5 gimnasios me ahorra tiempo y dinero. La app funciona rápida y sin fallos."
@@ -1086,7 +887,7 @@
 <div>
 <h3 class="font-headline-md text-headline-md uppercase text-primary mb-1">Arenys de Mar</h3>
 <p class="font-body-sm text-body-sm text-secondary mb-3 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> C/ Francesc Macià, 18
+<span aria-hidden="true" class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> C/ Francesc Macià, 18
             </p>
 <p class="font-body-md text-body-md text-on-surface-variant mb-4">
               Instalaciones recién inauguradas con maquinaria Panatta &amp; BH de última generación, amplia zona funcional y parking concertado.
@@ -1099,7 +900,7 @@
 </div>
 <div class="flex gap-2 pt-4 border-t border-surface-container-highest">
 <a class="flex-1 text-center bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm uppercase py-2.5 rounded border border-outline-variant/40 flex items-center justify-center gap-1 transition-all" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
+<span aria-hidden="true" class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
             </a>
 <a class="flex-1 text-center bg-surface-container-high hover:bg-surface-container-highest text-primary-container font-label-sm text-label-sm uppercase py-2.5 rounded transition-all" href="#">
               Ver Centro
@@ -1111,7 +912,7 @@
 <div>
 <h3 class="font-headline-md text-headline-md uppercase text-primary mb-1">Abrera</h3>
 <p class="font-body-sm text-body-sm text-secondary mb-3 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> Pol. Ind. Sant Ermengol, C/ Major 45
+<span aria-hidden="true" class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> Pol. Ind. Sant Ermengol, C/ Major 45
             </p>
 <p class="font-body-md text-body-md text-on-surface-variant mb-4">
               Referente de la zona en halterofilia y fuerza. Dispone de zona oficial HYROX con trineos y sala inmersiva de Cycling.
@@ -1124,7 +925,7 @@
 </div>
 <div class="flex gap-2 pt-4 border-t border-surface-container-highest">
 <a class="flex-1 text-center bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm uppercase py-2.5 rounded border border-outline-variant/40 flex items-center justify-center gap-1 transition-all" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
+<span aria-hidden="true" class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
             </a>
 <a class="flex-1 text-center bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase py-2.5 rounded transition-all" href="#">
               Ver Centro
@@ -1136,7 +937,7 @@
 <div>
 <h3 class="font-headline-md text-headline-md uppercase text-primary mb-1">Pallejà</h3>
 <p class="font-body-sm text-body-sm text-secondary mb-3 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> Avinguda Prat de la Riba, 12
+<span aria-hidden="true" class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> Avinguda Prat de la Riba, 12
             </p>
 <p class="font-body-md text-body-md text-on-surface-variant mb-4">
               Pista HYROX completa con 4 pistas de trineo continuo, plataformas de halterofilia Eleiko y zona dedicada de Recovery.
@@ -1149,7 +950,7 @@
 </div>
 <div class="flex gap-2 pt-4 border-t border-surface-container-highest">
 <a class="flex-1 text-center bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm uppercase py-2.5 rounded border border-outline-variant/40 flex items-center justify-center gap-1 transition-all" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
+<span aria-hidden="true" class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
             </a>
 <a class="flex-1 text-center bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase py-2.5 rounded transition-all" href="#">
               Ver Centro
@@ -1161,7 +962,7 @@
 <div>
 <h3 class="font-headline-md text-headline-md uppercase text-primary mb-1">Olesa de Montserrat</h3>
 <p class="font-body-sm text-body-sm text-secondary mb-3 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> Rambla dels Països Catalans, 30
+<span aria-hidden="true" class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> Rambla dels Països Catalans, 30
             </p>
 <p class="font-body-md text-body-md text-on-surface-variant mb-4">
               Gran nave técnica con sector de musculación pesada Panatta Free Weight, estudio de Pilates y área de cardio de alto flujo.
@@ -1174,7 +975,7 @@
 </div>
 <div class="flex gap-2 pt-4 border-t border-surface-container-highest">
 <a class="flex-1 text-center bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm uppercase py-2.5 rounded border border-outline-variant/40 flex items-center justify-center gap-1 transition-all" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
+<span aria-hidden="true" class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
             </a>
 <a class="flex-1 text-center bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase py-2.5 rounded transition-all" href="#">
               Ver Centro
@@ -1186,7 +987,7 @@
 <div>
 <h3 class="font-headline-md text-headline-md uppercase text-primary mb-1">Lliçà d'Amunt</h3>
 <p class="font-body-sm text-body-sm text-secondary mb-3 flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> Passeig de Can Cruset, 8
+<span aria-hidden="true" class="material-symbols-outlined text-[16px] text-primary-container">location_on</span> Passeig de Can Cruset, 8
             </p>
 <p class="font-body-md text-body-md text-on-surface-variant mb-4">
               Instalación masiva de más de 1.400m² con box de Crosstraining, zona oficial HYROX, césped de arrastre y parking privado gratuito.
@@ -1199,7 +1000,7 @@
 </div>
 <div class="flex gap-2 pt-4 border-t border-surface-container-highest">
 <a class="flex-1 text-center bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm uppercase py-2.5 rounded border border-outline-variant/40 flex items-center justify-center gap-1 transition-all" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
+<span aria-hidden="true" class="material-symbols-outlined text-[16px]">directions</span> Cómo llegar
             </a>
 <a class="flex-1 text-center bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase py-2.5 rounded transition-all" href="#">
               Ver Centro
@@ -1210,7 +1011,7 @@
 </div>
 </section>
 <!-- 10. COMUNIDAD NS247 -->
-<section class="w-full bg-surface py-space-xl border-t border-surface-container-highest/30">
+<section id="comunidad" class="w-full bg-surface py-space-xl border-t border-surface-container-highest/30">
 <div class="max-w-7xl mx-auto px-6 lg:px-12">
 <div class="flex flex-col items-center text-center mb-space-xl">
 <span class="font-label-lg text-label-lg uppercase tracking-widest text-primary-container mb-2">Cultura de Rendimiento</span>
@@ -1224,43 +1025,43 @@
 <!-- Feed Grid -->
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-space-lg">
 <div class="aspect-square rounded-xl overflow-hidden relative group">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Athletes celebrating on a Hyrox competition podium wearing NonStop Gym custom athletic jerseys with medals, energetic camaraderie." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUOay4YJ-GQp2VZxvRBVl8v2nwWthhSLVIKkvt3odJQBSZYV9Gw-Qu8_susZ8P3t2Co5yVZa1i0-qqEmHnYfxNbKMoWqO7Yo-Ps2h_eUK2o5NDvb90vC3qmFS0IRts4z3DDNXFjRTaU0SazPDgtzN3Zl9MqheCnOZHmesZAIqzqdyxF8lV1ZkJK_m7WbE7vdBFNAvmJPDTgKpVGWVni5Ectts_-MtqkUHjWFbL1Qo60osuylT1iTY"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Athletes celebrating on a Hyrox competition podium wearing NonStop Gym custom athletic jerseys with medals, energetic camaraderie." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUOay4YJ-GQp2VZxvRBVl8v2nwWthhSLVIKkvt3odJQBSZYV9Gw-Qu8_susZ8P3t2Co5yVZa1i0-qqEmHnYfxNbKMoWqO7Yo-Ps2h_eUK2o5NDvb90vC3qmFS0IRts4z3DDNXFjRTaU0SazPDgtzN3Zl9MqheCnOZHmesZAIqzqdyxF8lV1ZkJK_m7WbE7vdBFNAvmJPDTgKpVGWVni5Ectts_-MtqkUHjWFbL1Qo60osuylT1iTY" width="512" height="279" decoding="async" loading="lazy"/>
 <div class="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-primary-container text-[36px]">photo_camera</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[36px]">photo_camera</span>
 </div>
 </div>
 <div class="aspect-square rounded-xl overflow-hidden relative group">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High intensity night workout session with group of runners during NS247 Run Club through lighted city streets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqAB8HOtkqa0MEXefVDvnlkLS5B5_AwXUPN2umlZ9VNXNbQ-E5rvhZyDgrA-VHu3w_KZeHD4h2KwD4ZDymZzXdj033GOiinUJD6jUA4smTb-phCXqtG03WvxsZrWTUc1ZgZqmJ8nolFsuy1ksP7t8-Yx7hawrcKI0WKtnv282o2UtN34HKwW310l52wZhitsWlFuS4BCZjAxffsRQLMw5Dn-LH3TQ0OepDv--35Wfe5Y7tG-h-6bA"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High intensity night workout session with group of runners during NS247 Run Club through lighted city streets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqAB8HOtkqa0MEXefVDvnlkLS5B5_AwXUPN2umlZ9VNXNbQ-E5rvhZyDgrA-VHu3w_KZeHD4h2KwD4ZDymZzXdj033GOiinUJD6jUA4smTb-phCXqtG03WvxsZrWTUc1ZgZqmJ8nolFsuy1ksP7t8-Yx7hawrcKI0WKtnv282o2UtN34HKwW310l52wZhitsWlFuS4BCZjAxffsRQLMw5Dn-LH3TQ0OepDv--35Wfe5Y7tG-h-6bA" width="512" height="279" decoding="async" loading="lazy"/>
 <div class="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-primary-container text-[36px]">photo_camera</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[36px]">photo_camera</span>
 </div>
 </div>
 <div class="aspect-square rounded-xl overflow-hidden relative group">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dedicated athlete training deadlifts on wooden lifting platform in dark gym with dramatic yellow spotlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWEcoyJe0YMIJAlMN1XPLqjQlygku63OkBja8IwWYr1__LMJjA5H8aACDNh7b_3RoR8cwPxFaS6zM7Xh9dhzlrtZiI-x2wJYAJiBeGv75UvzKcOMbhtC9OeKI1kC85n-kxHOfWraXk_16Otf2WcF4GIQ7-7h_7ya02RRt8rlEkqXbxRr1YkU_xMbRQjhbOJDj_W2SoCd8WyNeP-Ztn0AiKSzBxZJtCCD-_oNdFQCFMxoLo29untc4"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dedicated athlete training deadlifts on wooden lifting platform in dark gym with dramatic yellow spotlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWEcoyJe0YMIJAlMN1XPLqjQlygku63OkBja8IwWYr1__LMJjA5H8aACDNh7b_3RoR8cwPxFaS6zM7Xh9dhzlrtZiI-x2wJYAJiBeGv75UvzKcOMbhtC9OeKI1kC85n-kxHOfWraXk_16Otf2WcF4GIQ7-7h_7ya02RRt8rlEkqXbxRr1YkU_xMbRQjhbOJDj_W2SoCd8WyNeP-Ztn0AiKSzBxZJtCCD-_oNdFQCFMxoLo29untc4" width="512" height="279" decoding="async" loading="lazy"/>
 <div class="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-primary-container text-[36px]">photo_camera</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[36px]">photo_camera</span>
 </div>
 </div>
 <div class="aspect-square rounded-xl overflow-hidden relative group">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Group fitness indoor class celebrating end of high intensity interval training workout with high fives and positive energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3VRadN5r7f2qY3Li9eRhJoK77OYZU2vNnYdEI2zYrVfVEQ0l6mWLakahq-V6BV99c-Je7Giv_ONjgXOcV8SAR6i57kXUOiElpfZ9bEyFMtE7Fd8lgtmENcZIdxx8-9F5P2cLxPue5G0D8M109grl7SHgBIUvK62Sr0ddbFLkmv2pD1PlJX5oY3RsnE9jSzVkzqIT4wannkpGc4frA73n_c-BHerfo-j2pWGCr5-rZdPeXRb76t_8"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Group fitness indoor class celebrating end of high intensity interval training workout with high fives and positive energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3VRadN5r7f2qY3Li9eRhJoK77OYZU2vNnYdEI2zYrVfVEQ0l6mWLakahq-V6BV99c-Je7Giv_ONjgXOcV8SAR6i57kXUOiElpfZ9bEyFMtE7Fd8lgtmENcZIdxx8-9F5P2cLxPue5G0D8M109grl7SHgBIUvK62Sr0ddbFLkmv2pD1PlJX5oY3RsnE9jSzVkzqIT4wannkpGc4frA73n_c-BHerfo-j2pWGCr5-rZdPeXRb76t_8" width="512" height="279" decoding="async" loading="lazy"/>
 <div class="absolute inset-0 bg-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-primary-container text-[36px]">photo_camera</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container text-[36px]">photo_camera</span>
 </div>
 </div>
 </div>
 <!-- Follow Social Callout -->
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 <a class="inline-flex items-center gap-2 bg-surface-container hover:bg-surface-container-high px-6 py-3 rounded-lg border border-outline-variant/60 text-primary font-headline-sm text-headline-sm uppercase transition-all" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-primary-container">photo_camera</span> Síguenos en @nonstopgym24
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container">photo_camera</span> Síguenos en @nonstopgym24
         </a>
 <a class="inline-flex items-center gap-2 bg-surface-container hover:bg-surface-container-high px-6 py-3 rounded-lg border border-outline-variant/60 text-primary font-headline-sm text-headline-sm uppercase transition-all" href="https://tiktok.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-primary-container">play_arrow</span> TikTok @nonstopgym24h
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container">play_arrow</span> TikTok @nonstopgym24h
         </a>
 </div>
 </div>
 </section>
 <!-- 11. PREGUNTAS FRECUENTES (FAQ Acordeón) -->
-<section class="w-full bg-surface-container-lowest py-space-xl border-t border-surface-container-highest/30">
+<section id="faq" class="w-full bg-surface-container-lowest py-space-xl border-t border-surface-container-highest/30">
 <div class="max-w-4xl mx-auto px-6 lg:px-12">
 <div class="flex flex-col items-center text-center mb-space-xl">
 <span class="font-label-lg text-label-lg uppercase tracking-widest text-primary-container mb-2">Resolvemos tus dudas</span>
@@ -1274,7 +1075,7 @@
 <details class="bg-surface-container-low rounded-xl border border-surface-container-highest group open:border-primary-container/50 transition-colors">
 <summary class="p-5 font-headline-sm text-headline-sm uppercase text-primary flex items-center justify-between cursor-pointer select-none">
 <span>¿Hay permanencia o contrato obligatorio?</span>
-<span class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
 <div class="px-5 pb-5 font-body-md text-body-md text-secondary">
             No. Creemos en ganarnos tu confianza mes a mes. Puedes cancelar tu suscripción con total libertad cuando quieras avisando con 15 días de preaviso directamente desde tu área de socio en la aplicación móvil, sin penalizaciones ni preguntas.
@@ -1284,7 +1085,7 @@
 <details class="bg-surface-container-low rounded-xl border border-surface-container-highest group open:border-primary-container/50 transition-colors">
 <summary class="p-5 font-headline-sm text-headline-sm uppercase text-primary flex items-center justify-between cursor-pointer select-none">
 <span>¿Puedo entrenar en todos los centros con la misma cuota?</span>
-<span class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
 <div class="px-5 pb-5 font-body-md text-body-md text-secondary">
             Sí. Tu suscripción incluye automáticamente acceso irrestricto 24/7 los 365 días del año a los 5 centros activos de Cataluña: Abrera, Olesa de Montserrat, Pallejà, Lliçà d'Amunt y el nuevo centro de Arenys de Mar.
@@ -1294,7 +1095,7 @@
 <details class="bg-surface-container-low rounded-xl border border-surface-container-highest group open:border-primary-container/50 transition-colors">
 <summary class="p-5 font-headline-sm text-headline-sm uppercase text-primary flex items-center justify-between cursor-pointer select-none">
 <span>¿Cómo entro al gimnasio si no hay personal en recepción?</span>
-<span class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
 <div class="px-5 pb-5 font-body-md text-body-md text-secondary">
             El sistema de acceso es 100% digital y autónomo. Puedes ingresar en segundos con el reconocimiento facial biométrico (Face ID) del torno o escaneando el código QR dinámico que genera tu app móvil NonStop Gym 24h.
@@ -1304,7 +1105,7 @@
 <details class="bg-surface-container-low rounded-xl border border-surface-container-highest group open:border-primary-container/50 transition-colors">
 <summary class="p-5 font-headline-sm text-headline-sm uppercase text-primary flex items-center justify-between cursor-pointer select-none">
 <span>¿Es seguro entrenar de noche o de madrugada?</span>
-<span class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
 <div class="px-5 pb-5 font-body-md text-body-md text-secondary">
             Absolutamente. Todas nuestras instalaciones disponen de circuito cerrado de videovigilancia CCTV en alta definición monitorizado las 24 horas, pulsadores de emergencia SOS con conexión directa a central de seguridad y desfibrilador DESA en zonas visibles.
@@ -1314,7 +1115,7 @@
 <details class="bg-surface-container-low rounded-xl border border-surface-container-highest group open:border-primary-container/50 transition-colors">
 <summary class="p-5 font-headline-sm text-headline-sm uppercase text-primary flex items-center justify-between cursor-pointer select-none">
 <span>¿Cómo cancelo mi suscripción?</span>
-<span class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
 <div class="px-5 pb-5 font-body-md text-body-md text-secondary">
             En un solo clic. Entras en la sección "Mi Cuenta" de la app o página web y solicitas la baja. Te llegará una confirmación por correo al instante sin necesidad de acudir físicamente al centro ni de realizar llamadas telefónicas.
@@ -1324,7 +1125,7 @@
 <details class="bg-surface-container-low rounded-xl border border-surface-container-highest group open:border-primary-container/50 transition-colors">
 <summary class="p-5 font-headline-sm text-headline-sm uppercase text-primary flex items-center justify-between cursor-pointer select-none">
 <span>¿Puedo probar las instalaciones antes de apuntarme?</span>
-<span class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
 <div class="px-5 pb-5 font-body-md text-body-md text-secondary">
             Por supuesto. Puedes comprar un Pase de Día por 10€ (que se te descuenta si decides tramitar tu alta) o bien solicitar tu Asesoría Gratuita de 30 minutos con un entrenador rellenando el formulario de esta web.
@@ -1334,7 +1135,7 @@
 <details class="bg-surface-container-low rounded-xl border border-surface-container-highest group open:border-primary-container/50 transition-colors">
 <summary class="p-5 font-headline-sm text-headline-sm uppercase text-primary flex items-center justify-between cursor-pointer select-none">
 <span>¿Hay entrenadores y personal en las instalaciones?</span>
-<span class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
 <div class="px-5 pb-5 font-body-md text-body-md text-secondary">
             Sí. Disponemos de equipo técnico presencial en las franjas horarias principales (de mañana y tarde) para resolver dudas de ejecución, mantener las salas impecables y coordinar las actividades dirigidas, además de entrenadores personales bajo reserva.
@@ -1344,7 +1145,7 @@
 <details class="bg-surface-container-low rounded-xl border border-surface-container-highest group open:border-primary-container/50 transition-colors">
 <summary class="p-5 font-headline-sm text-headline-sm uppercase text-primary flex items-center justify-between cursor-pointer select-none">
 <span>¿Cómo reservo las clases dirigidas?</span>
-<span class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
+<span aria-hidden="true" class="material-symbols-outlined text-primary-container transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
 <div class="px-5 pb-5 font-body-md text-body-md text-secondary">
             Directamente desde la app oficial de NonStop Gym 24h. Tienes acceso al calendario semanal de actividades con aforo actualizado en directo para reservar tu bicicleta de Cycling o tu esterilla con un solo toque.
@@ -1369,7 +1170,7 @@
 <div class="flex flex-col sm:flex-row items-center justify-center gap-space-md mb-8">
 <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-tertiary-fixed text-on-primary-container font-headline-md text-headline-md uppercase px-10 py-5 rounded font-extrabold shadow-[0_0_32px_rgba(254,228,0,0.4)] transform hover:-translate-y-1 transition-all" href="#tarifas">
           Únete desde 37,30€/mes
-          <span class="material-symbols-outlined font-black">arrow_forward</span>
+          <span aria-hidden="true" class="material-symbols-outlined font-black">arrow_forward</span>
 </a>
 </div>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-on-surface-variant font-body-sm text-body-sm">
@@ -1394,32 +1195,31 @@
 <div class="flex items-center justify-between sm:justify-end gap-3 w-full sm:w-auto">
 <!-- Direct WhatsApp Contact Icon -->
 <a aria-label="Contactar por WhatsApp" class="h-11 w-11 rounded bg-surface-container hover:bg-surface-container-high text-emerald-400 border border-outline-variant/40 flex items-center justify-center shrink-0 transition-colors shadow" href="https://wa.me/34600242424?text=Hola,%20quiero%20información%20sobre%20NonStop%20Gym%2024h" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[24px]">chat</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[24px]">chat</span>
 </a>
 <!-- Big Sticky CTA Button -->
 <a class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-tertiary-fixed text-on-primary-container font-headline-sm text-headline-sm uppercase px-6 py-2.5 rounded font-bold shadow-[0_0_20px_rgba(254,228,0,0.35)] transition-all" href="#tarifas">
 <span>Únete desde 37,30€/mes</span>
-<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[18px]">bolt</span>
 </a>
 </div>
 </div>
 </div>
 </div>
-<!-- Smooth scrolling interaction script -->
+<!-- Menú móvil: abrir/cerrar y cerrar al elegir sección (el desplazamiento suave va por CSS) -->
 <script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId && targetId !== '#') {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          e.preventDefault();
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      }
-    });
-  });
-</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="max-w-7xl mx-auto px-6 lg:px-12 pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div><div class="flex items-center gap-space-sm mb-space-md"><span aria-hidden="true" class="w-8 h-8 inline-flex items-center justify-center shrink-0 rounded-lg bg-primary-container text-[#0E1115] font-label-lg text-[18px] font-extrabold italic tracking-tight leading-none shadow-[0_0_24px_-4px_rgba(255,229,0,0.35)]">NS</span><span class="font-headline-sm text-headline-sm uppercase text-primary whitespace-nowrap">NONSTOP <span class="text-primary-container">24H</span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Cadena técnica de entrenamiento continuo en Cataluña. 5 centros de máxima intensidad disponibles las 24 horas, los 365 días del año.</p><div class="flex items-center gap-space-sm"><a aria-label="Instagram" class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface hover:text-primary-container hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-title-md">photo_camera</span></a><a aria-label="YouTube" class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface hover:text-primary-container hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-title-md">play_circle</span></a><a aria-label="WhatsApp" class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface hover:text-primary-container hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-title-md">chat</span></a></div></div><div><h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md tracking-wider">Navegación</h3><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="landing-page" href="#">Inicio</a></li><li><a class="hover:text-primary transition-colors" data-path="centros" href="#">Centros y Aforos</a></li><li><a class="hover:text-primary transition-colors" data-path="tarifas" href="#">Tarifas y Pases</a></li><li><a class="hover:text-primary transition-colors" data-path="servicios" href="#">Equipamiento y Zonas</a></li><li><a class="hover:text-primary transition-colors" data-path="comunidad" href="#">Comunidad Atletas</a></li><li><a class="hover:text-primary transition-colors" data-path="contacto" href="#">Soporte y Contacto</a></li></ul></div><div class="lg:col-span-2"><h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md tracking-wider flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container">location_on</span>Centros en Cataluña (24/7)</h3><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm font-body-sm text-body-sm"><div class="bg-surface-container-low p-space-sm rounded"><p class="font-title-md text-title-md text-primary">Abrera</p><p class="text-on-surface-variant font-body-sm text-body-sm">Av. Lluís Companys, 28</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Parking</p></div><div class="bg-surface-container-low p-space-sm rounded"><p class="font-title-md text-title-md text-primary">Olesa de Montserrat</p><p class="text-on-surface-variant font-body-sm text-body-sm">Carrer de les Moreres, 4</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Box Funcional</p></div><div class="bg-surface-container-low p-space-sm rounded"><p class="font-title-md text-title-md text-primary">Pallejà</p><p class="text-on-surface-variant font-body-sm text-body-sm">Carrer del Comerç, 12</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Zona Hammer</p></div><div class="bg-surface-container-low p-space-sm rounded"><p class="font-title-md text-title-md text-primary">Lliçà d'Amunt</p><p class="text-on-surface-variant font-body-sm text-body-sm">Ctra. de Granollers, 84</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Powerlifting</p></div><div class="bg-surface-container-low p-space-sm rounded sm:col-span-2"><p class="font-title-md text-title-md text-primary">Arenys de Mar</p><p class="text-on-surface-variant font-body-sm text-body-sm">Riera del Bisbe Pol, 110</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Acceso Huella</p></div></div></div><div><h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md tracking-wider">Contacto &amp; Asistencia</h3><ul class="space-y-space-xs font-body-sm text-body-sm mb-space-md"><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container">support_agent</span><span>Atención: 08:00 - 22:00</span></li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container">call</span><span>+34 938 00 24 00</span></li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container">chat</span><span>WhatsApp: +34 600 24 24 24</span></li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container">mail</span><span>info@nonstopgym24h.cat</span></li></ul><div><p class="font-label-sm text-label-sm uppercase tracking-wider text-primary mb-space-xs">Boletín Atletas</p><div class="flex items-center"><input class="bg-surface-container text-primary font-body-sm text-body-sm px-space-sm py-space-xs rounded-l w-full focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Tu email" type="email"/><button class="bg-primary-container hover:bg-tertiary-fixed text-on-primary-container font-label-sm text-label-sm uppercase px-space-sm py-space-xs rounded-r flex items-center justify-center" type="button"><span class="material-symbols-outlined text-title-sm">arrow_forward</span></button></div></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm"><p class="text-on-surface-variant">© 2025 NonStop Gym 24h Catalunya. Rendimiento y entrenamiento ininterrumpido.</p><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" data-path="aviso-legal" href="#">Aviso Legal</a><a class="hover:text-primary transition-colors" data-path="privacidad" href="#">Política de Privacidad</a><a class="hover:text-primary transition-colors" data-path="cookies" href="#">Cookies</a><a class="hover:text-primary transition-colors" data-path="condiciones" href="#">Términos de Membresía</a></div></div></div></footer></body></html>
+  (function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu-movil");
+    const icon = toggle.querySelector("span");
+    function setOpen(open) {
+      menu.classList.toggle("hidden", !open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      icon.textContent = open ? "close" : "menu";
+    }
+    toggle.addEventListener("click", () => setOpen(menu.classList.contains("hidden")));
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
+  })();
+</script></main><footer id="contacto" class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="max-w-7xl mx-auto px-6 lg:px-12 pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div><div class="flex items-center gap-space-sm mb-space-md"><span aria-hidden="true" class="w-8 h-8 inline-flex items-center justify-center shrink-0 rounded-lg bg-primary-container text-[#0E1115] font-label-lg text-[18px] font-extrabold italic tracking-tight leading-none shadow-[0_0_24px_-4px_rgba(255,229,0,0.35)]">NS</span><span class="font-headline-sm text-headline-sm uppercase text-primary whitespace-nowrap">NONSTOP <span class="text-primary-container">24H</span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Cadena técnica de entrenamiento continuo en Cataluña. 5 centros de máxima intensidad disponibles las 24 horas, los 365 días del año.</p><div class="flex items-center gap-space-sm"><a aria-label="Instagram" class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface hover:text-primary-container hover:bg-surface-container-high transition-colors" href="#"><span aria-hidden="true" class="material-symbols-outlined text-title-md">photo_camera</span></a><a aria-label="YouTube" class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface hover:text-primary-container hover:bg-surface-container-high transition-colors" href="#"><span aria-hidden="true" class="material-symbols-outlined text-title-md">play_circle</span></a><a aria-label="WhatsApp" class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface hover:text-primary-container hover:bg-surface-container-high transition-colors" href="https://wa.me/34600242424?text=Hola,%20quiero%20información%20sobre%20NonStop%20Gym%2024h" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="material-symbols-outlined text-title-md">chat</span></a></div></div><div><h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md tracking-wider">Navegación</h3><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" data-path="landing-page" href="#inicio">Inicio</a></li><li><a class="hover:text-primary transition-colors" data-path="centros" href="#centros">Centros y Aforos</a></li><li><a class="hover:text-primary transition-colors" data-path="tarifas" href="#tarifas">Tarifas y Pases</a></li><li><a class="hover:text-primary transition-colors" data-path="servicios" href="#servicios">Equipamiento y Zonas</a></li><li><a class="hover:text-primary transition-colors" data-path="comunidad" href="#comunidad">Comunidad Atletas</a></li><li><a class="hover:text-primary transition-colors" data-path="contacto" href="#contacto">Soporte y Contacto</a></li></ul></div><div class="lg:col-span-2"><h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md tracking-wider flex items-center gap-space-xs"><span aria-hidden="true" class="material-symbols-outlined text-primary-container">location_on</span>Centros en Cataluña (24/7)</h3><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm font-body-sm text-body-sm"><div class="bg-surface-container-low p-space-sm rounded"><p class="font-title-md text-title-md text-primary">Abrera</p><p class="text-on-surface-variant font-body-sm text-body-sm">Av. Lluís Companys, 28</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Parking</p></div><div class="bg-surface-container-low p-space-sm rounded"><p class="font-title-md text-title-md text-primary">Olesa de Montserrat</p><p class="text-on-surface-variant font-body-sm text-body-sm">Carrer de les Moreres, 4</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Box Funcional</p></div><div class="bg-surface-container-low p-space-sm rounded"><p class="font-title-md text-title-md text-primary">Pallejà</p><p class="text-on-surface-variant font-body-sm text-body-sm">Carrer del Comerç, 12</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Zona Hammer</p></div><div class="bg-surface-container-low p-space-sm rounded"><p class="font-title-md text-title-md text-primary">Lliçà d'Amunt</p><p class="text-on-surface-variant font-body-sm text-body-sm">Ctra. de Granollers, 84</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Powerlifting</p></div><div class="bg-surface-container-low p-space-sm rounded sm:col-span-2"><p class="font-title-md text-title-md text-primary">Arenys de Mar</p><p class="text-on-surface-variant font-body-sm text-body-sm">Riera del Bisbe Pol, 110</p><p class="text-label-sm text-label-sm text-primary-container font-label-sm mt-space-xs">Abierto 24/7 • Acceso Huella</p></div></div></div><div><h3 class="font-headline-sm text-headline-sm uppercase text-primary mb-space-md tracking-wider">Contacto &amp; Asistencia</h3><ul class="space-y-space-xs font-body-sm text-body-sm mb-space-md"><li class="flex items-center gap-space-xs"><span aria-hidden="true" class="material-symbols-outlined text-primary-container">support_agent</span><span>Atención: 08:00 - 22:00</span></li><li class="flex items-center gap-space-xs"><span aria-hidden="true" class="material-symbols-outlined text-primary-container">call</span><span>+34 938 00 24 00</span></li><li class="flex items-center gap-space-xs"><span aria-hidden="true" class="material-symbols-outlined text-primary-container">chat</span><span>WhatsApp: +34 600 24 24 24</span></li><li class="flex items-center gap-space-xs"><span aria-hidden="true" class="material-symbols-outlined text-primary-container">mail</span><span>info@nonstopgym24h.cat</span></li></ul><div><p class="font-label-sm text-label-sm uppercase tracking-wider text-primary mb-space-xs">Boletín Atletas</p><div class="flex items-center"><input aria-label="Tu email para el boletín" autocomplete="email" class="bg-surface-container text-primary font-body-sm text-body-sm px-space-sm py-space-xs rounded-l w-full focus:outline-none focus:ring-1 focus:ring-primary-container" name="email" placeholder="Tu email" type="email"/><button class="bg-primary-container hover:bg-tertiary-fixed text-on-primary-container font-label-sm text-label-sm uppercase px-space-sm py-space-xs rounded-r flex items-center justify-center" type="button"><span aria-hidden="true" class="material-symbols-outlined text-title-sm">arrow_forward</span></button></div></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm"><p class="text-on-surface-variant">© 2025 NonStop Gym 24h Catalunya. Rendimiento y entrenamiento ininterrumpido.</p><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" data-path="aviso-legal" href="#">Aviso Legal</a><a class="hover:text-primary transition-colors" data-path="privacidad" href="#">Política de Privacidad</a><a class="hover:text-primary transition-colors" data-path="cookies" href="#">Cookies</a><a class="hover:text-primary transition-colors" data-path="condiciones" href="#">Términos de Membresía</a></div></div></div></footer></body></html>

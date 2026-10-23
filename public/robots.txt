@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elbaifopruebas.vercel.app/sitemap.xml
